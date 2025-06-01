@@ -1,0 +1,82 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{hyperref}
+\usepackage{geometry}
+\usepackage{fancyhdr}
+\usepackage{booktabs}
+
+\geometry{margin=1in}
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{Saúl — Ciencia de Datos, ITAM}
+\lhead{Proyecto con Datos}
+\cfoot{\thepage}
+
+\title{Análisis Exploratorio de Datos}
+\author{Saúl \\ Ciencia de Datos — ITAM}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\section*{Resumen}
+
+Este informe presenta un análisis exploratorio de datos usando herramientas estadísticas básicas y visualizaciones. 
+
+\section{Introducción}
+
+Este proyecto tiene como objetivo explorar un conjunto de datos y aplicar técnicas estadísticas simples para obtener conclusiones preliminares. Los datos provienen de fuentes abiertas y se encuentran disponibles en este repositorio.
+
+\section{Formulación del Problema}
+
+El objetivo es estimar la media y varianza de una variable aleatoria \( X \), asumiendo que sigue una distribución normal:
+
+\[
+X \sim \mathcal{N}(\mu, \sigma^2)
+\]
+
+La media muestral se calcula como:
+
+\[
+\bar{X} = \frac{1}{n} \sum_{i=1}^n X_i
+\]
+
+Y la varianza muestral es:
+
+\[
+S^2 = \frac{1}{n - 1} \sum_{i=1}^n (X_i - \bar{X})^2
+\]
+
+\section{Tabla Resumen}
+
+\begin{table}[h!]
+\centering
+\begin{tabular}{@{}lcc@{}}
+\toprule
+Variable & Media (\(\bar{X}\)) & Desviación estándar (\(S\)) \\
+\midrule
+Altura (cm) & 170.3 & 6.2 \\
+Peso (kg)   & 68.5  & 7.4 \\
+\bottomrule
+\end{tabular}
+\caption{Estadísticas descriptivas}
+\end{table}
+
+\section{Visualización}
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.75\textwidth]{https://raw.githubusercontent.com/USUARIO/REPOSITORIO/RAMA/figs/grafico1.png}
+    \caption{Histograma de la variable \( X \)}
+    \label{fig:histograma}
+\end{figure}
+
+\section{Conclusión}
+
+Los resultados indican que la distribución de la variable es aproximadamente normal. En el futuro se pueden aplicar pruebas de hipótesis y modelos de regresión.
+
+\end{document}
