@@ -1,0 +1,23 @@
+name: Compile LaTeX PDF
+
+on:
+  push:
+    paths:
+      - '**.tex'
+
+jobs:
+  build_latex:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Compile LaTeX document
+        uses: xu-cheng/latex-action@v2
+        with:
+          root_file: main.tex
+
+      - name: Upload PDF as artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: main-pdf
+          path: main.pdf
